@@ -11,30 +11,27 @@
   </head>
   <body>
     <div class="container">
-        <h1>SPOTIFY PLAYLIST DATA DOWNLOADER</h1>
+        <div id="app-title-text-container">
+          <h1>Spotify Playlist Data Downloader</h1>
+        </div>
         <p>https://open.spotify.com/playlist/0iHdjYXY0R0oDGUdgGxgrO?si=15d598da0e2f4836</p>
-        <form id="playlist-form">
+        <div id="form-container">
             <label for="playlist-input">Enter the Spotify Playlist URL:</label>
-            <input id="playlist-input" type="text">
-            <div>
-                <button type="button" onclick="downloadPlaylist()">Download</button>
+            <div id="input-button-container">
+              <input id="playlist-input" type="text">
+              <button id="download-button" type="button" onclick="downloadPlaylist()">Download</button>
             </div>
-        </form>
+            </div>
         <div id="table-container">
           <table id="playlist-table">
             <thead>
               <tr>
-                <th>Song</th>
-                <th>Artist</th>
-                <th>Album</th>
+                <th>#</th>
+                <th>TITLE</th>
+                <th>ALBUM</th>
               </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th>Song</th>
-                    <th>Artist</th>
-                    <th>Album</th>
-                </tr>
             </tbody>
           </table>
         </div>

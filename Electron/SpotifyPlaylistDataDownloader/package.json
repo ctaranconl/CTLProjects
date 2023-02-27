@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "set ELECTRON_ENABLE_LOGGING=1&&electron ."
   },
   "keywords": [],
@@ -12,8 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "datatables.net": "^1.13.2",
-    "electron": "^23.1.1",
     "jquery": "^3.6.3",
     "spotify-web-api-node": "^5.0.2"
+  },
+  "devDependencies": {
+    "electron": "^23.1.1"
   }
 }

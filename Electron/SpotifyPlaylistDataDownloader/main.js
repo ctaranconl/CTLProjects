@@ -5,7 +5,10 @@ const { ipcMain } = require('electron');
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
+    frame: false,
     width: 1280,
+    minWidth: 1280,
+    minHeight: 720,
     height: 720,
     webPreferences: {
       nodeIntegration: true,
@@ -13,6 +16,8 @@ function createWindow () {
       enableRemoteModule: true
     }
   })
+  // Remove the menu bar
+  mainWindow.setMenu(null);
 
   // Load the index.html file.
   mainWindow.loadFile('index.html')

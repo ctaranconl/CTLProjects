@@ -1,34 +1,95 @@
+@import "fonts/bariol/style.css";
+
+
+
+label {
+    padding: 3px;
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
+    background-color: #010409;
+    color: white;
 }
 
 h1 {
-    font-family: Arial, sans-serif;
+    font-family: 'Bariol Bold', sans-serif;
+    text-align: center;
+    color: #1ED760;
+    letter-spacing: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    font-size: 25px;
+    font-family: 'Bariol Light', sans-serif;
 }
 
 input[type="text"] {
-    width: 90%;
-    padding: 10px;
-    border-radius: 5px;
+    width: 65%;
+    font-family: 'Bariol Regular', sans-serif;
+    font-size: 15px;
+    height: 35px;
+    border-radius: 20px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
+    flex:1;
+}
+
+#form-container {
+    background-color: #161B22;
+    padding: 20px;
+    border-radius: 5px;
+    margin: auto;
+    width: 50%;
+}
+
+#input-button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#app-title-text-container {
+    background-color: #161B22;
+    margin: auto;
+    width: 50%;
+    border-radius: 5px;
 }
 
 #table-container {
     overflow-y: auto;
+    width: 100%;
     max-height: 350px;
-    margin: 0 15px;
+    
+}
+
+#download-button {
+    background-color: #1ED760;
+    font-family: 'Bariol Bold', sans-serif;
+    font-size: 15px;
+    color: black;
+    width: 30%;
+    height: 40px;
+    /*margin:0 auto;
+    display:block;*/
+    border-radius: 20px;
+    border-width: 0px;
+    float: right;
 }
 
 table {
-    width: 100%;
+    margin: 20px auto 0px auto;
+    width: 90%;
     border-collapse: collapse;
+}
+
+thead {
+    color: #A4A4A4;
+    font-family: 'Bariol Regular', sans-serif;
 }
 
 th, td {
