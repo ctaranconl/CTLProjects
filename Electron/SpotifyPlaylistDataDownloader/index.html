@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Spotify Playlist Data Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="renderer.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <h1>SPOTIFY PLAYLIST DATA DOWNLOADER</h1>
+        <p>https://open.spotify.com/playlist/0iHdjYXY0R0oDGUdgGxgrO?si=15d598da0e2f4836</p>
+        <form id="playlist-form">
+            <label for="playlist-input">Enter the Spotify Playlist URL:</label>
+            <input id="playlist-input" type="text">
+            <div>
+                <button type="button" onclick="downloadPlaylist()">Download</button>
+            </div>
+        </form>
+        <div id="table-container">
+          <table id="playlist-table">
+            <thead>
+              <tr>
+                <th>Song</th>
+                <th>Artist</th>
+                <th>Album</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Song</th>
+                    <th>Artist</th>
+                    <th>Album</th>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </body>
+</html

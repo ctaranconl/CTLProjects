@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+
+# Build files
+dist/
+out/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
