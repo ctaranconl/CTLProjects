@@ -11,7 +11,7 @@ function updateTable(songs) {
     
     const playlistTable = document.getElementById('playlist-table');
     const playlistName = songs[1]
-    console.log(playlistName)
+    document.getElementById("playlist-title").innerHTML = playlistName
     const table_header = document.getElementById('table-header');
     table_header.innerHTML = 
     '<tr>'+
@@ -30,7 +30,6 @@ function updateTable(songs) {
         const songAlbum = track.track.album.name;
         const artistName = track.track.artists[0].name;
         const duration = track.track.album.duration_ms;
-
 
         const row = document.createElement('tr');
         row.setAttribute("id", "table-row")
