@@ -20,8 +20,8 @@ async function downloadPlaylistData(playlistUrl) {
         console.log('Something went wrong!', err);
         }
     );
-
-    return spotifyApi.getPlaylist(playlistId, { 'fields': 'name,tracks.items(track(name,artists(name),album(name)))' })
+    //return spotifyApi.getPlaylist(playlistId, { 'fields': 'name,tracks.items(track(name, id, artists(name),album(name),album(images), duration_ms))' })
+    return spotifyApi.getPlaylist(playlistId)
     .then(function(data) {
         return data.body;
     }, function(err) {
