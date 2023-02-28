@@ -14,7 +14,8 @@ function createWindow () {
       nodeIntegration: true,
       contextIsolation: false,
       enableRemoteModule: true
-    }
+    },
+    resizable: false
   })
   // Remove the menu bar
   mainWindow.setMenu(null);

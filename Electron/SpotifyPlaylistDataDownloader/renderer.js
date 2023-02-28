@@ -10,16 +10,17 @@ async function downloadPlaylist() {
 function updateTable(songs) {
     
     const playlistTable = document.getElementById('playlist-table');
-    const playlistName = songs.name
-    //const table_header = document.getElementById("table_header");
-    //table_header.innerHTML = 
-    //'<tr>'+
-    //'    <th>#</th>'+
-    //'    <th>TITLE</th>'+
-    //'    <th>ALBUM</th>'+
-    //'</tr>';
-    //playlistTable.appendChild(table_header)
-    songs.tracks.items.forEach((track, index) => {
+    const playlistName = songs[1]
+    console.log(playlistName)
+    const table_header = document.getElementById('table-header');
+    table_header.innerHTML = 
+    '<tr>'+
+    '    <th>#</th>'+
+    '    <th>TITLE</th>'+
+    '    <th>ALBUM</th>'+
+    '</tr>';
+    playlistTable.appendChild(table_header)
+    songs[0].forEach((track, index) => {
 
         const albumImageUrl = track.track.album.images[0].url || 'album.jpg';
         //console.log(albumImageUrl)
@@ -61,4 +62,43 @@ function updateTable(songs) {
 
         playlistTable.appendChild(row);
     });
+
+    showSlideIn();
 }
+
+//function showExportButton(){
+//    const mainContainer = document.getElementsByClassName('container1')[0]
+//    const exportButton = document.createElement('div')
+//    exportButton.setAttribute('id', 'export-button-container')
+//
+//    exportButton.innerHTML = 
+//        '<div id="export-button-container">'+
+//        '    <button id="export-button" type="button" onclick="showSlideIn()">Export Data</button>'+
+//        '</div>';
+//    
+//    mainContainer.appendChild(exportButton)
+//}
+
+function exportPlaylistData(){
+    const exportWindow = window.open('', 'Export', 'width=500,height=500');
+
+
+
+    exportWindow.document.body.innerHTML = `
+    <div id="export-container">
+      <select id="format-select">
+        <option value="csv">CSV</option>
+        <option value="excel">Excel</option>
+      </select>
+      <input type="text" id="export-path-input" placeholder="Export path">
+      <button id="execute-export-button">Export</button>
+    </div>
+  `;
+}
+
+function showSlideIn() {
+    const slideIn = document.querySelector('.container1');
+    const slideIn2 = document.querySelector('.container2');
+    slideIn.classList.add('show');
+    slideIn2.classList.add('show');
+  }

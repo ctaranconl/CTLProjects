@@ -10,35 +10,37 @@
     <script src="renderer.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container1">
         <div id="app-title-text-container">
           <h1>Spotify Playlist Data Downloader</h1>
         </div>
-        <p>https://open.spotify.com/playlist/0iHdjYXY0R0oDGUdgGxgrO?si=15d598da0e2f4836</p>
+        
         <div id="form-container">
             <label for="playlist-input">Enter the Spotify Playlist URL:</label>
             <div id="input-button-container">
               <input id="playlist-input" type="text">
               <button id="download-button" type="button" onclick="downloadPlaylist()">Download</button>
             </div>
-            </div>
-        <div id="table-container">
-          <table id="playlist-table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>TITLE</th>
-                <th>ALBUM</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-            </tbody>
-          </table>
         </div>
-        <div>
-            <button id="export-button" type="button">Export Data</button>
-        </div>
+        
+    </div>
+
+    <div class="container2">
+      <div id="table-container">
+        <table id="playlist-table">
+          <thead id='table-header'>
+            
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
       </div>
+      <div id="export-button-container">
+          <button id="export-button" type="button" onclick="">Export Data</button>
+      </div>
+    </div>
+
+
   </body>
 </html
