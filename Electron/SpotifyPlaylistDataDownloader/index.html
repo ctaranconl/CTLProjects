@@ -14,19 +14,37 @@
         <div id="app-title-text-container">
           <h1>Spotify Playlist Data Downloader</h1>
         </div>
-        
-        <div id="form-container">
-            <label for="playlist-input">Enter the Spotify Playlist URL:</label>
-            <div id="input-button-container">
-              <input id="playlist-input" type="text">
-              <button id="download-button" type="button" onclick="downloadPlaylist()">Download</button>
+        <div id="main-menu-download">
+          <div id = "submenu-container">
+            <div id="ins-container">
+              <ul>
+                <li>In Spotify, go to the playlist listing at the left</li>
+                <li>Right click on a playlist</li>
+                <li>Select Share -> Copy playlist link</li>
+                <li>Paste the URI in the input below and hit Download</li>
+                <li>Click in Export</li>
+                <li>Select desired format and path to export</li>
+                <li>Done!</li>
+              </ul>
             </div>
+            <div id="gif-container">
+              
+            </div>
+          </div>
+          <div id="form-container">
+              <label for="playlist-input">Enter the Spotify Playlist URL:</label>
+              <div id="input-button-container">
+                <input id="playlist-input" type="text">
+                <button id="download-button" type="button" onclick="downloadPlaylist()">Download</button>
+              </div>
+          </div>
         </div>
         
     </div>
 
     <div class="container2">
       <h2 id="playlist-title"></h2>
+      <h3 id="playlist-count"></h3>
       <div id="table-container">
         <table id="playlist-table">
           <thead id='table-header'>
@@ -38,8 +56,14 @@
         </table>
       </div>
       <div id="export-button-container">
-          <button id="export-button" type="button" onclick="">Export Data</button>
+          <button id="go-back-button"><img id="go-back-icon" src="icons/goback.svg" alt="Go back">
+          </button>
+          <button id="export-button" type="button" onclick="showSlideIn2()">Export</button>
       </div>
+    </div>
+
+    <div class="container3">
+      <h2>lolazo</h2>
     </div>
 
 

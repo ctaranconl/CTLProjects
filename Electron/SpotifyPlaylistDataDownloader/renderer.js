@@ -12,6 +12,7 @@ function updateTable(songs) {
     const playlistTable = document.getElementById('playlist-table');
     const playlistName = songs[1]
     document.getElementById("playlist-title").innerHTML = playlistName
+    document.getElementById("playlist-count").innerHTML = songs[0].length + " songs"
     const table_header = document.getElementById('table-header');
     table_header.innerHTML = 
     '<tr>'+
@@ -99,6 +100,18 @@ function exportPlaylistData(){
 function showSlideIn() {
     const slideIn = document.querySelector('.container1');
     const slideIn2 = document.querySelector('.container2');
+    const slideIn3 = document.querySelector('.container3');
     slideIn.classList.add('show');
     slideIn2.classList.add('show');
+    slideIn3.classList.add('show');
   }
+
+function showSlideIn2(){
+    console.log('Hasta aqui he llegao');
+    const slideIn = document.querySelector('.container1');
+    const slideIn2 = document.querySelector('.container2');
+    const slideIn3 = document.querySelector('.container3');
+    slideIn.classList.add('show2');
+    slideIn2.classList.add('show2');
+    slideIn3.classList.add('show2');
+}
