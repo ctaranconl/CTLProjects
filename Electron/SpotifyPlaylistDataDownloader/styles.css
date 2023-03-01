@@ -160,7 +160,8 @@ thead {
 
 th {
     padding: 10px;
-    text-align: left;
+    text-align: center;
+    margin-bottom: 10px;
 }
 td {
     padding: 6px 3px 3px 3px;
@@ -171,7 +172,8 @@ td:first-child {
     border-bottom-left-radius: 3px;
 }
 td:last-child {
-    margin-right: 10px;
+    margin-top: 13px;
+    border-top-right-radius: 3px; 
     border-bottom-right-radius: 3px; 
 }
 #table-row:hover {
@@ -204,4 +206,14 @@ img {
     font-family: 'Bariol Light Bold', sans-serif;
     font-size: 15px;
     color: white;
+}
+
+.center-element {
+    display: flex;
+    justify-content: center;
+}
+
+#time-icon {
+    width: 25px;
+    height: 25px;
 }

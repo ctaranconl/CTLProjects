@@ -18,6 +18,7 @@ function updateTable(songs) {
     '    <th>#</th>'+
     '    <th>TITLE</th>'+
     '    <th>ALBUM</th>'+
+    '    <th class="center-element"><img id="time-icon" src=icons/timeclock.png></th>'+
     '</tr>';
     playlistTable.appendChild(table_header)
     songs[0].forEach((track, index) => {
@@ -29,13 +30,16 @@ function updateTable(songs) {
         const songTitle = track.track.name;
         const songAlbum = track.track.album.name;
         const artistName = track.track.artists[0].name;
-        const duration = track.track.album.duration_ms;
+        const duration = msToMinutes(track.track.duration_ms);
 
         const row = document.createElement('tr');
         row.setAttribute("id", "table-row")
         const indexCell = document.createElement('td');
+        indexCell.setAttribute("class", "center-element");
         const title = document.createElement('td');
         const album = document.createElement('td');
+        const songDuration = document.createElement('td');
+        songDuration.setAttribute("class", "center-element");
 
         song_artist_cell = 
                 
@@ -54,10 +58,14 @@ function updateTable(songs) {
         title.innerHTML = song_artist_cell;
         //artist.innerText = track.track.artists.map(artist => artist.name).join(', ');
         album.innerText = songAlbum;
+        minutesDecimal = (duration/1000)/60;
+        minutes = minutesDecimal;
+        songDuration.innerHTML = duration;
 
         row.appendChild(indexCell);
         row.appendChild(title);
         row.appendChild(album);
+        row.appendChild(songDuration);
 
         playlistTable.appendChild(row);
     });
@@ -65,18 +73,11 @@ function updateTable(songs) {
     showSlideIn();
 }
 
-//function showExportButton(){
-//    const mainContainer = document.getElementsByClassName('container1')[0]
-//    const exportButton = document.createElement('div')
-//    exportButton.setAttribute('id', 'export-button-container')
-//
-//    exportButton.innerHTML = 
-//        '<div id="export-button-container">'+
-//        '    <button id="export-button" type="button" onclick="showSlideIn()">Export Data</button>'+
-//        '</div>';
-//    
-//    mainContainer.appendChild(exportButton)
-//}
+function msToMinutes(ms) {
+    const minutes = Math.floor(ms / 60000); // divide milliseconds by 60000 to get minutes
+    const seconds = Math.floor((ms % 60000) / 1000); // get the remaining seconds
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`; // return the result as a formatted string
+}
 
 function exportPlaylistData(){
     const exportWindow = window.open('', 'Export', 'width=500,height=500');
